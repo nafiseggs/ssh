@@ -8,7 +8,7 @@ const { spawn } = require("child_process");
 const path = require("path");
 
 const app = express();
-const PORT = 4050;
+const PORT = 8080;
 
 // Configure multer to save files with original extension
 const storage = multer.diskStorage({
