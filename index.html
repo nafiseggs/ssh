@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Diary Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Date Pill -->
+    <div class="date-pill">
+      <div class="calendar-icon"></div>
+      <input type="date" id="dateInput" />
+    </div>
+
+    <div class="loader" id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="container" id="formSection">
+      <h1>School Diary</h1>
+      <form id="diaryForm">
+        <div class="form-group">
+          <label for="class">Class</label>
+          <select id="class" required>
+            <option value="">Select class</option>
+            <option value="STD.I (Orchid & Camellia)">STD.I (Orchid & Camellia)</option>
+            <option value="STD.II (Daffodil & Daisy)">STD.II (Daffodil & Daisy)</option>
+            <option value="STD.III (Magnolia & Gardenia)">STD.III (Magnolia & Gardenia)</option>
+            <option value="STD.IV (Lavender)">STD.IV (Lavender)</option>
+            <option value="STD.V (Azalea)">STD.V (Azalea)</option>
+            <option value="STD.VI (Iris)">STD.VI (Iris)</option>
+            <option value="STD.VII (Aster)">STD.VII (Aster)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" required>
+            <option value="">Select subject</option>
+            <option value="Music">Music</option>
+            <option value="As per routine">As per routine</option>
+            <option value="Bangla">Bangla</option>
+            <option value="Art & Craft">Art & Craft</option>
+            <option value="Value Education">Value Education</option>
+            <option value="English">English</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Science">Science</option>
+            <option value="Global English">Global English</option>
+            <option value="Physics">Physics</option>
+            <option value="BGST">BGST</option>
+            <option value="ICT">ICT</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Biology">Biology</option>
+            <option value="Primary English">Primary English</option>
+            <option value="Mathematics D">Mathematics D</option>
+            <option value="Mathematics Additional">Mathematics Additional</option>
+            <option value="Global Citizenship">Global Citizenship</option>
+            <option value="Global Perspective">Global Perspective</option>
+            <option value="Global Perspective & Global Citizenship">Global Perspective & Global Citizenship</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="teacher">Teacher Name</label>
+          <input type="text" id="teacher" placeholder="Enter teacher name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="classwork">Classwork</label>
+          <textarea id="classwork" placeholder="Enter classwork details" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="homework">Homework</label>
+          <textarea id="homework" placeholder="Leave blank if none"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="remarks">Remarks</label>
+          <input type="text" id="remarks" placeholder="Enter remarks" value="N/A" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate Diary</button>
+      </form>
+    </div>
+
+    <div class="container result-card hidden" id="resultSection">
+      <img id="diaryImage" alt="Generated Diary" />
+      <div class="button-group">
+        <button class="btn btn-secondary" id="backBtn">Back</button>
+        <button class="btn btn-download" id="downloadBtn">Download</button>
+        <button class="btn btn-facebook" id="postFbBtn">Post to FB</button>
+      </div>
+    </div>
+
+    <div class="footer" id="footer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
